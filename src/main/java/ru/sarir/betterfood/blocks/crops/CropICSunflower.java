@@ -21,6 +21,11 @@ public class CropICSunflower extends CropCard {
 	public String name() {
 		return "Sunflower";
 	}
+	
+	@Override
+	public String discoveredBy() {
+		return "Serious07 & Sarir";
+	}
 
 	@Override
 	public int tier() {
@@ -61,7 +66,7 @@ public class CropICSunflower extends CropCard {
 	
 	@Override
 	public boolean canCross(ICropTile crop) {
-		return false;
+		return true;
 	}
 
 	@Override
@@ -83,12 +88,12 @@ public class CropICSunflower extends CropCard {
 	
 	@Override
 	public int growthDuration(ICropTile crop) {
-		return 250;
+		return 100;
 	}
 	
 	@Override
     public byte getSizeAfterHarvest(ICropTile crop) {
-        return 2;
+        return 1;
     }
 
 }
