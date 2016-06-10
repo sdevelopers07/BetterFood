@@ -12,14 +12,15 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+		classpath files('libs/forestry_60_dev.jar','libs/ic2e_822_dev.jar')
     }
 }
 
 apply plugin: 'forge'
 
-version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+version = "1.7.10-1.0"
+group= "ru.sarir.betterfood" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "betterfood"
 
 minecraft {
     version = "1.7.10-10.13.4.1566-1.7.10"
@@ -60,4 +61,12 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+apply plugin: 'java'
+
+compileJava.options.encoding = 'UTF-8'
+
+dependencies {
+    compile files('libs/forestry_60_dev.jar','libs/ic2e_822_dev.jar')
 }
