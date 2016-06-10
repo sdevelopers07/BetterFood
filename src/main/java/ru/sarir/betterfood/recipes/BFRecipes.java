@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.oredict.OreDictionary;
 import ru.sarir.betterfood.fluids.BFFluids;
 import ru.sarir.betterfood.items.BFItems;
 
@@ -36,7 +37,7 @@ public class BFRecipes {
 																				  " M ",
 																				  "   ",
 																				  'B', Items.bread,
-																				  'K', BFItems.knife,
+																				  'K', new ItemStack(BFItems.knife, 1, OreDictionary.WILDCARD_VALUE),
 																				  'G', Items.cooked_beef,
 																				  'M', BFItems.mayoPotion});
 		

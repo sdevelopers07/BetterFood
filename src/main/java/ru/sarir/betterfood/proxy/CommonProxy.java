@@ -6,11 +6,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import ic2.api.crops.CropCard;
 import ic2.api.crops.Crops;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import ru.sarir.betterfood.blocks.BFBlocks;
 import ru.sarir.betterfood.blocks.crops.CropICSunflower;
 import ru.sarir.betterfood.fluids.BFFluids;
-import ru.sarir.betterfood.handlers.BFCraftingHandler;
 import ru.sarir.betterfood.items.BFItems;
 import ru.sarir.betterfood.recipes.BFRecipes;
 
@@ -28,11 +26,7 @@ public class CommonProxy {
 		Crops.instance.registerBaseSeed(new ItemStack(BFItems.sunflowerSeeds, 4), crop, 1, 1, 1, 1);
 	}
 
-	public void init(FMLInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(new BFCraftingHandler());
-	}
+	public void init(FMLInitializationEvent event) {}
 
-	public void postInit(FMLPostInitializationEvent postEvent) {
-
-	}
+	public void postInit(FMLPostInitializationEvent postEvent) {}
 }
