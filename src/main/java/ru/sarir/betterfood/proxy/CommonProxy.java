@@ -25,7 +25,7 @@ public class CommonProxy {
 		CropCard crop = new CropICSunflower();
 		
 		Crops.instance.registerCrop(crop);
-		Crops.instance.registerBaseSeed(new ItemStack(BFItems.sunflowerSeeds), crop, 1, 1, 1, 1);
+		Crops.instance.registerBaseSeed(new ItemStack(BFItems.sunflowerSeeds, 4), crop, 1, 1, 1, 1);
 	}
 
 	public void init(FMLInitializationEvent event) {

@@ -6,10 +6,12 @@ import forestry.core.utils.datastructures.ItemStackMap;
 import ic2.api.crops.CropCard;
 import ic2.api.crops.ICropTile;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import ru.sarir.betterfood.Globals;
+import ru.sarir.betterfood.items.BFItems;
 
 public class CropICSunflower extends CropCard {
 
@@ -22,7 +24,7 @@ public class CropICSunflower extends CropCard {
 
 	@Override
 	public int tier() {
-		return 0;
+		return 1;
 	}
 
 	@Override
@@ -75,8 +77,13 @@ public class CropICSunflower extends CropCard {
 	@Override
 	public ItemStack getGain(ICropTile crop) {
 		if(crop.getSize() == maxGrowthStage) {
-			return new ItemStack(Blocks.double_plant, 1, 0);
+			return new ItemStack(Blocks.double_plant, 4, 0);
 		} else return null;
+	}
+	
+	@Override
+	public int growthDuration(ICropTile crop) {
+		return 250;
 	}
 	
 	@Override
